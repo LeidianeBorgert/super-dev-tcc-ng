@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-create',
   imports: [],
   template: `
     <p>
-      dashboard works!
+      create works!
     </p>
   `,
-  styles: ``,
+  styles: ``
 })
-export class Dashboard {
+export class CadastroCreate {
 
 }
