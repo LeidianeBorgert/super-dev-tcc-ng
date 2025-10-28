@@ -18,15 +18,16 @@ import { TextareaModule } from 'primeng/textarea';
     FormsModule,
     TextareaModule],
   template: `
-  
+  <div class="p-30">
             <div class="card flex justify-center  mt-2"> 
-              <label for="campo-nacionalidade">Bairros</label>
-
+              <label for="campo-nacionalidade">Bairros:</label>
+            </div>
+          <div class="card flex justify-center  mt-2"> 
                 <p-select id="bairro" [(ngModel)]="bairroSelecionado" 
                 [options]="bairros" optionLabel="nome" optionValue="nome" 
                 placeholder="Selecione o Bairro" class="w-full md:w-100" />
             </div>
- 
+  </div>
   `,
   styles: ``
 })
