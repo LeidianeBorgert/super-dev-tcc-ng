@@ -9,6 +9,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { TagModule } from 'primeng/tag';
 import { Product, ProductService } from '../../service/product.service';
 
+
 @Component({
     selector: 'app-list',
     imports: [CommonModule,
@@ -18,11 +19,19 @@ import { Product, ProductService } from '../../service/product.service';
         PickListModule,
         OrderListModule,
         TagModule,
-        ButtonModule],
+        ButtonModule,],
     template: `
     <div class="flex flex-col">
+        
         <div class="card">
             <div class="font-semibold text-xl">DataView</div>
+
+            <div class="bg-white rounded-x1 shadow-sm p-4">
+        <div class="flex flex-row gap-4">
+            <p-select  label="teste" [(ngModel)]="filtroSelecionado"></p-select>
+        </div>
+    </div>
+
             <p-dataview [value]="products" [layout]="layout">
                 <ng-template #header>
                     <div class="flex justify-end">
@@ -67,9 +76,8 @@ import { Product, ProductService } from '../../service/product.service';
                                     </div>
                                     <div class="flex flex-col md:items-end gap-8">
                                         <span class="text-xl font-semibold"> {{ item.price }} dias em aberto</span>
-                                        <div class="flex flex-row-reverse md:flex-row gap-2">
-                                            <p-button icon="pi pi-heart" styleClass="h-full" [outlined]="true"></p-button>
-                                            <p-button icon="pi pi-shopping-cart" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" styleClass="flex-auto md:flex-initial whitespace-nowrap"></p-button>
+                                        <div class="flex flex-row-reverse md:flex-row gap-2">   
+                                            <p-button icon="pi pi-eye" label="Visualizar" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" styleClass="flex-auto md:flex-initial whitespace-nowrap"></p-button>
                                         </div>
                                     </div>
                                 </div>
@@ -135,6 +143,11 @@ import { Product, ProductService } from '../../service/product.service';
         providers: [ProductService]
 })
 export class OcorrenciaList {
+    filtros = ["Todos", "Ativos", "Inativos"];
+    filtroSelecionado: string = "Todos";
+    pesquisa: string = "";
+
+    visible = false;
     layout: 'list' | 'grid' = 'list';
 
     options = ['list', 'grid'];
@@ -158,13 +171,13 @@ export class OcorrenciaList {
 
     getSeverity(product: Product) {
         switch (product.inventoryStatus) {
-            case 'INSTOCK':
+            case 'BURACO':
                 return 'success';
 
-            case 'LOWSTOCK':
+            case 'ILUMINAÇÃO':
                 return 'warn';
 
-            case 'OUTOFSTOCK':
+            case 'PODA':
                 return 'danger';
 
             default:

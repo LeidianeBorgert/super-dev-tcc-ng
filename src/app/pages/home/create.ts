@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'app-create',
   imports: [],
   template: `
     <p>
-      edit works!
+      create works!
     </p>
   `,
   styles: ``
 })
-export class BairroEdit {
+export class HomeCreate {
 
 }

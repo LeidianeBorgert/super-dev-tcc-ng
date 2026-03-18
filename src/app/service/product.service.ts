@@ -32,19 +32,19 @@ export class ProductService {
                 price: 3 ,
                 category: 'Rua XV',
                 quantity: 24,
-                inventoryStatus: 'Buraco',
+                inventoryStatus: 'BURACO',
                 rating: 5
             },
             {
                 id: '1001',
                 code: 'nvklal433',
-                name: 'Black Watch',
+                name: 'Rerum mollitia doloremque vel, velit labore vitae aut non? Perferendis itaque similique doloribus fugit totam reprehenderit tempora quis enim a? In, eum?',
                 description: 'Product Description',
                 image: 'https://noviello.adv.br/wp-content/uploads/2019/06/buracos-nas-vias-wp.jpg',
                 price: 72,
-                category: 'Iluminação',
+                category: 'Rua 7 de setembro',
                 quantity: 61,
-                inventoryStatus: 'INSTOCK',
+                inventoryStatus: 'ILUMINAÇÃO',
                 rating: 4
             },
           

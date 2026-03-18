@@ -18,20 +18,27 @@ import { TextareaModule } from 'primeng/textarea';
     FormsModule,
     TextareaModule],
   template: `
-  <div class="p-30">
-            <div class="card flex justify-center  mt-2"> 
-              <label for="campo-nacionalidade">Bairros:</label>
+<div class="bg-surface-50 dark:bg-surface-950 flex items-center  min-h-screen min-w-screen overflow-hidden">
+    <div class="flex flex-col items-center m-30">
+      <div class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20" style="border-radius: 53px">
+          <div class=" mb-8">
+            <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Selecione um bairro: </div>
+              <div class="card flex  mt-10"> 
+                <p-select id="bairros" [(ngModel)]="bairroSelecionado" 
+                [options]="bairros" optionLabel="bairros" optionValue="bairros" 
+                placeholder="Bairro" class="w-full md:w-100" />
             </div>
-          <div class="card flex justify-center  mt-2"> 
-                <p-select id="bairro" [(ngModel)]="bairroSelecionado" 
-                [options]="bairros" optionLabel="nome" optionValue="nome" 
-                placeholder="Selecione o Bairro" class="w-full md:w-100" />
-            </div>
-  </div>
+            <div class="p-10">
+              <p-button label="Pesquisar" styleClass="w-full" icon="pi pi-search" routerLink="/"></p-button>
+                        </div>
+                    </div>
+                </div>
+         
+        
   `,
   styles: ``
 })
-export class BairroList {
+export class HomeList {
   bairroSelecionado: string | null = null;
 
   bairros = [

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-edit',
   imports: [],
   template: `
     <p>
-      dashboard works!
+      edit works!
     </p>
   `,
-  styles: ``,
+  styles: ``
 })
-export class Dashboard {
+export class HomeEdit {
 
 }

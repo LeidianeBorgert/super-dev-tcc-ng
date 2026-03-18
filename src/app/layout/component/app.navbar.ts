@@ -17,18 +17,23 @@ export class AppNavbar {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-home',
-        routerLink: "/pages/dashboard"
-      },
-      {
-        label: 'Bairros',
         icon: 'pi pi-star',
-        routerLink: "/pages/bairros"
+        routerLink: "/pages/home"
       },
       {
         label: 'Ocorrências',
         icon: 'pi pi-search',
         routerLink: "/pages/ocorrencias"
+      },
+       {
+        label: 'Fazer Login',
+        icon: 'pi pi-user',
+        routerLink: "/pages/login"
+      },
+        {
+        label: 'Cadastre-se',
+        icon: '',
+        routerLink: "/pages/cadastro"
       },
     ]
   }

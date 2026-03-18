@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppLayout } from './app/layout/component/app.layout';
-import { BairroList } from '@/pages/bairro/list';
+import { HomeList } from '@/pages/home/list';
 import { LoginList } from '@/pages/login/list';
 import { CadastroList } from '@/pages/cadastro/list';
 
